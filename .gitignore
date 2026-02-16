@@ -1,0 +1,35 @@
+# Ignore vendor directory if using Composer
+vendor/
+
+# Ignore node_modules if using npm
+node_modules/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore log files
+*.log
+error_log
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.cache
+
+# Ignore sensitive configuration (if any)
+# config.php (uncomment if it contains sensitive data)
+
+# Keep these files (loading screen related)
+!css/loading.css
+!js/loading.js
+!loading.php
+!loading_config.php

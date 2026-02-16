@@ -1,5 +1,6 @@
 <?php
+require_once 'config.php';
 
-header("Location: client.php");
-exit;
+// Redirect directly to dashboard - no authentication required
+redirect('dashboard.php');
 ?>

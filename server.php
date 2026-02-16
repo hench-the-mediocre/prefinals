@@ -109,17 +109,43 @@ function processRequest($message, $pdo): string
     }
     
     switch ($data['action']) {
+        // Menu operations
         case 'create':
             return createMenuItem(data: $data, pdo: $pdo);
-            
         case 'read':
             return getMenuItems(pdo: $pdo);
-            
         case 'update':
             return updateMenuItem(data: $data, pdo: $pdo);
-            
         case 'delete':
             return deleteMenuItem(data: $data, pdo: $pdo);
+            
+        // Reservation operations
+        case 'create_reservation':
+            return createReservation(data: $data, pdo: $pdo);
+        case 'get_reservations':
+            return getReservations(data: $data, pdo: $pdo);
+        case 'update_reservation':
+            return updateReservation(data: $data, pdo: $pdo);
+        case 'cancel_reservation':
+            return cancelReservation(data: $data, pdo: $pdo);
+        case 'check_availability':
+            return checkTableAvailability(data: $data, pdo: $pdo);
+            
+        // Table operations
+        case 'get_tables':
+            return getTables(data: $data, pdo: $pdo);
+        case 'update_table_status':
+            return updateTableStatus(data: $data, pdo: $pdo);
+            
+        // Waiter operations
+        case 'get_waiters':
+            return getWaiters(pdo: $pdo);
+        case 'assign_waiter':
+            return assignWaiter(data: $data, pdo: $pdo);
+        case 'get_waiter_tables':
+            return getWaiterTables(data: $data, pdo: $pdo);
+        case 'get_assignments':
+            return getTableAssignments(pdo: $pdo);
             
         default:
             return "Error: Unknown action '" . $data['action'] . "'";

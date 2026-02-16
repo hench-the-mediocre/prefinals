@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Loading Test</title>
+    <link href="css/loading.css" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; }
+        .content {
+            padding: 2rem;
+            text-align: center;
+            background: white;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <div class="loading-content">
+            <div class="loading-logo-container">
+                <div class="loading-glow"></div>
+                <img src="images/logo.png" alt="Logo" class="loading-logo" onerror="this.style.display='none'">
+            </div>
+
+            <h1 class="restaurant-name">GOONERS TABLE</h1>
+            <p class="restaurant-tagline">Fine Dining Experience</p>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <div class="loading-text">
+                Preparing your table...
+                <span class="loading-percentage">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>✅ If you saw the loading screen, it works!</h1>
+        <p>The loading screen should have appeared for 2-3 seconds.</p>
+        <button onclick="location.reload()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+            Test Again
+        </button>
+    </div>
+
+    <script src="js/loading.js"></script>
+</body>
+</html>

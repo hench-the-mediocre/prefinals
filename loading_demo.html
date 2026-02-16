@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gooners Table - Loading Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/loading.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .demo-content {
+            padding: 2rem;
+            text-align: center;
+        }
+        .demo-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .demo-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <!-- Animated Particles Background -->
+        <div class="loading-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <!-- Main Loading Content -->
+        <div class="loading-content">
+            <!-- Logo with Glow Effect -->
+            <div class="loading-logo-container">
+                <div class="loading-glow"></div>
+                <img src="images/logo.png" alt="Gooners Table Logo" class="loading-logo">
+            </div>
+
+            <!-- Restaurant Name -->
+            <h1 class="restaurant-name">GOONERS TABLE</h1>
+            <p class="restaurant-tagline">Fine Dining Experience</p>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <!-- Loading Text -->
+            <div class="loading-text">
+                Preparing your table...
+                <span class="loading-percentage">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Content (shown after loading) -->
+    <div class="demo-content">
+        <h1>Loading Screen Demo</h1>
+        <p>The loading screen has finished. Click the button below to see it again!</p>
+        <button class="demo-btn" onclick="showLoading()">
+            <i class="bi bi-arrow-clockwise"></i> Show Loading Screen Again
+        </button>
+        <button class="demo-btn" onclick="window.location.href='dashboard.php'">
+            Go to Dashboard
+        </button>
+    </div>
+
+    <script src="js/loading.js"></script>
+    <script>
+        function showLoading() {
+            const loader = new LoadingScreen();
+            loader.show();
+            loader.init();
+        }
+    </script>
+</body>
+</html>
